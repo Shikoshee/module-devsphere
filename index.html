@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Module DevSphere | Software Development Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("Lc1PfW-Fcc2xeGdKd"); // 🔴 replace
+        })();
+    </script>
+
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/logo.jpeg" alt="Module DevSphere Logo">
+        <span>Module DevSphere</span>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Building Smart Digital Solutions</h1>
+        <p>We design, develop, and deliver world-class software solutions for startups & enterprises.</p>
+        <button onclick="scrollToSection('contact')">Get Started</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051" alt="Software Development">
+</section>
+
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Modern, scalable and responsive websites & web apps.</p>
+        </div>
+        <div class="service-card">
+            <h3>Mobile App Development</h3>
+            <p>iOS & Android apps using modern technologies.</p>
+        </div>
+        <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Clean, user-friendly and engaging design systems.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cloud & DevOps</h3>
+            <p>Secure cloud infrastructure & CI/CD pipelines.</p>
+        </div>
+        <div class="service-card">
+            <h3>Custom Software</h3>
+            <p>Tailored solutions for business automation.</p>
+        </div>
+        <div class="service-card">
+            <h3>AI & Automation</h3>
+            <p>Intelligent systems using AI & data-driven logic.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Team">
+    <div>
+        <h2>About Module DevSphere</h2>
+        <p>
+            Module DevSphere is a forward-thinking software development company
+            delivering reliable, scalable and innovative digital products.
+            We combine creativity, engineering excellence and modern technologies
+            to help businesses grow.
+        </p>
+        <ul>
+            <li>✔ Experienced Developers</li>
+            <li>✔ Agile Development Process</li>
+            <li>✔ Client-Centric Approach</li>
+            <li>✔ Quality & Security Focused</li>
+        </ul>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <h2>Our Work</h2>
+    <div class="portfolio-grid">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Project 1">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Project 2">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Project 3">
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Let’s build something amazing together 🚀</p>
+    <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+   <p id="status"></p>
+</section>
+
+<footer>
+    <p>© 2026 Module DevSphere. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
