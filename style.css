@@ -32,8 +32,8 @@ body {
 }
 
 .logo img {
-    width: 95px;
-    height: 95px;          /* ensures proper shape */
+    width: 65px;
+    height: 65px;          /* ensures proper shape */
     object-fit: cover;     /* prevents distortion */
     border-radius: 30%;    /* 👈 this makes edges 30% rounded */
 
@@ -62,7 +62,8 @@ body {
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
+    color: black;
+    font-size: 17px;
     font-weight: 500;
 }
 
