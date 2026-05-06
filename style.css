@@ -27,12 +27,36 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 .logo img {
-    width: 45px;
+    width: 95px;
+    height: 95px;          /* ensures proper shape */
+    object-fit: cover;     /* prevents distortion */
+    border-radius: 30%;    /* 👈 this makes edges 30% rounded */
+
+}
+.stats {
+    text-align: center;          /* centers all text */
+    padding: 60px 20px;
+    font-size: 36px;
+    color:  #ddd0d0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;     /* centers items horizontally */
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;   
+    font-size: 16px;
+    color: #110808;          /* makes it responsive */
+}
+
+.stats-grid div {
+    text-align: center;
 }
 
 nav a {
@@ -96,7 +120,7 @@ nav a:hover {
 }
 
 .service-card {
-    background: white;
+    background:  #ddd0d0;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
@@ -169,6 +193,304 @@ footer {
     color: white;
 }
 
+.why-us {
+    padding: 80px 20px;
+    background: #f9fbfd;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #222;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.why-us {
+    background: linear-gradient(to right, #f9fbfd, #eef5ff);
+}
+.why-grid div {
+    background: #ddd0d0;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.why-grid div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.why-grid h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.why-grid p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Grid layout */
+.testimonial-grid {
+    background-color:rgb(237, 238, 238);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual card */
+.testimonial {
+    background: #ddd0d0;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Quote text */
+.testimonial p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Client name */
+.testimonial h4 {
+    font-size: 14px;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Optional quote icon */
+.testimonial::before {
+    content: "“";
+    font-size: 50px;
+    color: #007bff;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    opacity: 0.2;
+}
+/* Feedback Section */
+.feedback {
+    padding: 60px 0;
+    background: linear-gradient(to right, #f9fbfd, #eef5ff);
+    text-align: center;
+    overflow: hidden;
+}
+
+.feedback h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Wrapper hides overflow */
+.feedback-wrapper {
+    overflow: hidden;
+    position: relative;
+    background-color: #110808;
+    margin-top: 5%;
+    width: 100%;
+}
+
+/* Moving track */
+.feedback-track {
+    display: flex;
+    background-color: white;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 30s linear infinite; 
+    
+}
+.feedback-track:hover {
+    animation-play-state: paused;
+}
+
+
+/* Individual items */
+.feedback-track span {
+    background: #ddd0d0;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* Featured Testimonial */
+.featured-testimonial {
+    padding: 60px 10px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-card {
+    max-width: 600px;
+    background: #ddd0d0;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Profile image */
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: -6%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Text */
+.testimonial-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Name */
+.testimonial-card h3 {
+    margin: 10px 0 5px;
+    color: #222;
+}
+
+/* Role */
+.testimonial-card span {
+    font-size: 14px;
+    color: #007bff;
+}
+/* CONTACT SECTION */
+.contact {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: #ddd0d0;
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.contact p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS */
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.25s ease;
+    background: #fff;
+}
+
+/* FOCUS STATE */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* TEXTAREA */
+#contactForm textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* BUTTON */
+#contactForm button {
+    padding: 14px;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 600;
+}
+
+#contactForm button:hover {
+    background: #3730a3;
+    transform: translateY(-1px);
+}
+
+#contactForm button:active {
+    transform: scale(0.98);
+}
+
+/* STATUS MESSAGE */
+#status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #444;
+}
 /* Responsive */
 @media (max-width: 900px) {
     .hero, .about {
@@ -204,5 +526,4 @@ footer {
     border-radius: 30px;
     cursor: pointer;
 }
-
 }
